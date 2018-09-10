@@ -1,3 +1,4 @@
+
 <!-- 学科紹介文学科選択ページ -->
 
 <html>
@@ -31,7 +32,7 @@
     <p id="title">PepperOCS 学科紹介内容設定</p>
     <p id="subtitle">by TeamOSASHIMI</p>
 
-<p id="manual">学科名</p>
+    <p id="manual">学科名</p>
 
 <!--学科選択のプルダウンメニュー-->
     <?php
@@ -55,18 +56,16 @@
         echo "取り出せてないよ";
             
     }else{
-    //SQLSRV_FETCH_ASSOCはカラム名でデータの取り出しをするために必要
-    echo "<form action=\"schoolintroductdetail.php\" method = \"post\">";                                                          
-    echo "<select name = \"department\" id = \"departmentList\">";
+        echo "<form action=\"schoolintroductdetail.php\" method = \"post\">";                                                          
+        echo "<select name = \"department\" id = \"departmentList\">";
         
         //
- while($row = sqlsrv_fetch_array($result)){
-     $department = $row['department'];
-     echo "<option>{$department}</option>";
- }
+            while($row = sqlsrv_fetch_array($result)){
+            $department = $row['department'];
+                echo "<option>{$department}</option>";
+            }
         echo "<option>新規登録</option>";
         echo "</select>";
-    
     }
     dbclose($con,$result);
     
@@ -76,10 +75,9 @@
     $department = $_POST["department"];
     
     ?>
-<br/>
+    <br/>
     <input type="button" id="button02" value="戻る">
-    <input type="submit" id="button02" value="選択"">
-<!--    <input type="submit" id="select" value="選択">-->
+    <input type="submit" id="button02" value="選択">
 
     
     
