@@ -1,9 +1,6 @@
 <<<<<<< HEAD
 <?php
 /*
-dbcon@phpScript
-by Relief@shimamura
-
 *使用に際して*
     クエリを実行するコード
     //クエリーを実行
@@ -41,8 +38,6 @@ function dbclose($conn, $result){
 =======
 <?php
 /*
-dbcon@phpScript
-by Relief@shimamura
 
 *使用に際して*
     クエリを実行するコード
